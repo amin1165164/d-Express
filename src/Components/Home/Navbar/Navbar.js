@@ -42,7 +42,7 @@ const Navbar = () => {
               </a>
             </li>
             <li class="nav-item me-5">
-              <Link class="nav-link" to="/admin">
+              <Link class="nav-link" to="/OrderList">
                 Admin
               </Link>
             </li>

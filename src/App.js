@@ -4,7 +4,10 @@ import "./App.css";
 import Home from "./Components/Home/Home/Home";
 import Login from "./Components/Login/Login";
 import PrivateRoute from "./Components/Privateroute/Privateroute";
+import AddService from "./Components/Users/Admin/AddService/AddService";
 import Admin from "./Components/Users/Admin/Admin";
+import MakeAdmin from "./Components/Users/Admin/MakeAdmin/MakeAdmin";
+import OrderList from "./Components/Users/Admin/OdrerList/OrderList";
 
 function App() {
   return (
@@ -19,8 +22,14 @@ function App() {
         <Route path="/login">
           <Login />
         </Route>
-        <PrivateRoute path="/admin">
-          <Admin/>
+        <Route path="/admin/addService">
+          <AddService/>
+        </Route>
+        <Route path="/admin/makeAdmin">
+          <MakeAdmin/>
+        </Route>
+        <PrivateRoute path="/orderList">
+          <OrderList/>
         </PrivateRoute>
       </Switch>
     </Router>
