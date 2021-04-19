@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const user = JSON.parse(localStorage.getItem("user")) || {};
   return (
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
@@ -42,15 +43,21 @@ const Navbar = () => {
               </a>
             </li>
             <li class="nav-item me-5">
-              <Link class="nav-link" to="/OrderList">
+              <Link class="nav-link" to="/sideBar">
                 Admin
               </Link>
             </li>
-            <li class="nav-item me-5">
-              <Link to="/login">
-                <button className="btn btn-primary">Login</button>
+
+            {!user.email && (
+              <Link className="btn btn-primary" to="/login">
+                Login
               </Link>
-            </li>
+            )}
+            {user.email && (
+              <Link className="nav-link active" to="/profile">
+                {user.name}
+              </Link>
+            )}
           </ul>
         </div>
       </div>

@@ -20,6 +20,12 @@ const Login = () => {
       .then((result) => {
         var user = result.user;
         console.log(user);
+        const loggedInUser = {
+          name: user.displayName,
+          email: user.email,
+          img: user.photoURL,
+        };
+        localStorage.setItem("user", JSON.stringify(loggedInUser));
         history.replace(from);
       })
       .catch((error) => {

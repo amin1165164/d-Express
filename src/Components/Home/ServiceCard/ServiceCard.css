@@ -1,8 +1,0 @@
-.service-icon:hover{
-    transition-property: width;
-    transition-duration: 2s;
-    transition-timing-function: linear;
-    transition-delay: 1s;
-    width: 35px;
-    height: px;
-}

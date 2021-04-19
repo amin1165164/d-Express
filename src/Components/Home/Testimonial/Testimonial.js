@@ -1,28 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import TestimonialCard from '../TestimonialCard/TestimonialCard';
 
 const Testimonial = () => {
-    const testimonialInfo = [
-        {
-            image: '',
-            name: 'Aminul Islam',
-            address: 'Dhanmondi',
-            review: 'Their service is good.'
-        },
-        {
-            image: '',
-            name: 'Mirazul Islam',
-            address: 'Gulshan',
-            review: 'Their service is good.'
-        },
-        {
-            image: '',
-            name: 'Istique Zahan',
-            address: 'khulna',
-            review: 'Their service is good.'
-        },
+    const [testimonialInfo, setTestimonialInfo] = useState([]);
+    useEffect(() =>{
+        fetch('http://localhost:5000/reviews')
+        .then(response => response.json())
+        .then(data => setTestimonialInfo(data))
+    }, [])
+    // const testimonialInfo = [
+    //     {
+    //         image: '',
+    //         name: 'Aminul Islam',
+    //         address: 'Dhanmondi',
+    //         review: 'Their service is good.'
+    //     },
+    //     {
+    //         image: '',
+    //         name: 'Mirazul Islam',
+    //         address: 'Gulshan',
+    //         review: 'Their service is good.'
+    //     },
+    //     {
+    //         image: '',
+    //         name: 'Istique Zahan',
+    //         address: 'khulna',
+    //         review: 'Their service is good.'
+    //     },
 
-    ]
+    // ]
     return (
         <section className="text-center mt-5">
             <h1 className="my-4">Testimonial</h1>

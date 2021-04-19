@@ -8,6 +8,9 @@ import AddService from "./Components/Users/Admin/AddService/AddService";
 import Admin from "./Components/Users/Admin/Admin";
 import MakeAdmin from "./Components/Users/Admin/MakeAdmin/MakeAdmin";
 import OrderList from "./Components/Users/Admin/OdrerList/OrderList";
+import BookService from "./Components/Users/NormalUser/BookService/BookService";
+import Review from "./Components/Users/NormalUser/Review/Review";
+import SideBar from "./Components/Users/SideBar/SideBar";
 
 function App() {
   return (
@@ -22,14 +25,23 @@ function App() {
         <Route path="/login">
           <Login />
         </Route>
+        <PrivateRoute path="/sideBar">
+          <SideBar/>
+        </PrivateRoute>
         <Route path="/admin/addService">
           <AddService/>
         </Route>
         <Route path="/admin/makeAdmin">
           <MakeAdmin/>
         </Route>
-        <PrivateRoute path="/orderList">
+        {/* <PrivateRoute path="/orderList">
           <OrderList/>
+        </PrivateRoute> */}
+        <PrivateRoute path="/review">
+          <Review/>
+        </PrivateRoute>
+        <PrivateRoute path="/bookService/:id">
+          <BookService/>
         </PrivateRoute>
       </Switch>
     </Router>
