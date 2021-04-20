@@ -5,7 +5,7 @@ import BookingList from "../BookingList/BookingList";
 const OrderList = () => {
   const [bookings, setBookings] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/bookings")
+    fetch("https://intense-bayou-17126.herokuapp.com/bookings")
       .then((response) => response.json())
       .then((data) => setBookings(data));
   }, []);

@@ -15,7 +15,7 @@ const BookService = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/service/${id}`)
+    fetch(`https://intense-bayou-17126.herokuapp.com/service/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setServiceType(data);
@@ -39,7 +39,7 @@ const BookService = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:5000/serviceBook", {
+    fetch("https://intense-bayou-17126.herokuapp.com/serviceBook", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(serviceBook),

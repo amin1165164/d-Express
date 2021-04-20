@@ -6,7 +6,7 @@ const SingleService = (props) => {
   const history = useHistory();
 
   const handleRemove = () => {
-    fetch(`http://localhost:5000/removeService/${_id}`, {
+    fetch(`https://intense-bayou-17126.herokuapp.com/removeService/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

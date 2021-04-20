@@ -20,7 +20,7 @@ const SideBar = () => {
   const adminEmail = isEmail.find(email => email.email);
   // console.log(adminEmail?.email);
   useEffect(() => {
-    fetch("http://localhost:5000/admins")
+    fetch("https://intense-bayou-17126.herokuapp.com/admins")
       .then((response) => response.json())
       .then((data) => setIsEmail(data));
   }, []);

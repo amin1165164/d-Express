@@ -14,7 +14,7 @@ const MakeAdmin = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:5000/addAdmin", {
+    fetch("https://intense-bayou-17126.herokuapp.com/addAdmin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(admin),

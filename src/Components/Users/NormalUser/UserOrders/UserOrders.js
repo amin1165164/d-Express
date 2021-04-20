@@ -10,7 +10,7 @@ const UserOrders = () => {
 //   console.log(userOrders);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/bookings/${user.email}`)
+    fetch(`https://intense-bayou-17126.herokuapp.com/bookings/${user.email}`)
       .then((response) => response.json())
       .then((data) => {
           console.log(data);
