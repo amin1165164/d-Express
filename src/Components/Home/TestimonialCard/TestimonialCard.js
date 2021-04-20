@@ -5,7 +5,7 @@ const TestimonialCard = (props) => {
   return (
     <div className="col-md-4">
       <div className="p-4 m-3 shadow rounded">
-        <img className="img-fluid w-25" src={image} alt="" />
+        <img className="img-fluid w-25 rounded-circle" src={image} alt="" />
         <h3>{name}</h3>
         <p>{address}</p>
         <p>{review}</p>

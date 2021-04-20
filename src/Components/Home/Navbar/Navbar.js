@@ -28,17 +28,17 @@ const Navbar = () => {
               </a>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="#footer">
                 About Us
               </a>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="#service">
                 Services
               </a>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="#contact">
                 Contact
               </a>
             </li>

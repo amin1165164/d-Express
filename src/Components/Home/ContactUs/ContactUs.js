@@ -3,11 +3,11 @@ import "./ContactUs.css";
 
 const ContactUs = () => {
   return (
-    <section className="container">
+    <section className="container" id="contact">
       <h1 className="my-4 text-center">CONTACT with US</h1>
       <form className="border p-5 m-5 shadow rounded form-background ">
         <div className="mb-3">
-          <label for="name" className="form-label">
+          <label htmlFor="name" className="form-label">
             Name
           </label>
           <input
@@ -18,7 +18,7 @@ const ContactUs = () => {
           />
         </div>
         <div className="mb-3">
-          <label for="email" className="form-label">
+          <label htmlFor="email" className="form-label">
             Email address
           </label>
           <input
@@ -29,7 +29,7 @@ const ContactUs = () => {
           />
         </div>
         <div className="mb-3">
-          <label for="mobileNumber" className="form-label">
+          <label htmlFor="mobileNumber" className="form-label">
             Mobile Number
           </label>
           <input
@@ -40,7 +40,7 @@ const ContactUs = () => {
           />
         </div>
         <div className="mb-3">
-          <label for="description" className="form-label">
+          <label htmlFor="description" className="form-label">
             Your Message
           </label>
           <textarea

@@ -17,14 +17,12 @@ const HeaderMain = () => {
             Online delivery system. We collect your product from your door and
             delivery to the requested customer.
           </p>
-          <button className="btn btn-primary">Booking</button>
+          <a href="#service">
+            <button className="btn btn-primary">GET SERVICES</button>
+          </a>
         </div>
         <div className="col-md-7">
-          <img
-            className="img-fluid"
-            src={HeaderImage}
-            alt=""
-          />
+          <img className="img-fluid" src={HeaderImage} alt="" />
         </div>
       </div>
     </main>

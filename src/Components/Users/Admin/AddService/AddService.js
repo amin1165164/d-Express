@@ -49,7 +49,7 @@ const AddService = () => {
           .then(data => {
             alert("Your service info is successfully added")
   
-            history.replace('/admin/addService')
+            history.replace('/')
           })
     }
   return (
@@ -57,7 +57,7 @@ const AddService = () => {
       <div className="col-md-3">
         <SideBar></SideBar>
       </div>
-      <div className="col-md-8 border border-3 border-success p-4 shadow">
+      <div className="col-md-8 border border-3 border-success p-4 shadow mt-4">
         <form onSubmit={handleSubmit}>
           <h3>Add Service</h3>
           <hr />

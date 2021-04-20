@@ -8,7 +8,7 @@ import './Footer.css'
 
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: "#DAF5FF" }}>
+    <footer style={{ backgroundColor: "#DAF5FF" }} id="footer">
       <div className="row p-5 mt-5">
         <div className="col-md-4 offset-md-1">
           <h1>D__ExPrEsS</h1>

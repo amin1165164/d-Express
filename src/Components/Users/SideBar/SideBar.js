@@ -8,15 +8,17 @@ import {
   faPlusCircle,
   faList,
   faUserPlus,
+  faEdit,
+  faClipboardList
 } from "@fortawesome/free-solid-svg-icons";
 
 const SideBar = () => {
   const [isEmail, setIsEmail] = useState([]);
-  console.log(isEmail)
+  // console.log(isEmail)
   const user = JSON.parse(localStorage.getItem("user")) || {};
-  console.log(user.email);
+  // console.log(user.email);
   const adminEmail = isEmail.find(email => email.email);
-  console.log(adminEmail?.email);
+  // console.log(adminEmail?.email);
   useEffect(() => {
     fetch("http://localhost:5000/admins")
       .then((response) => response.json())
@@ -30,14 +32,14 @@ const SideBar = () => {
         style={{ height: "100vh" }}
       >
         <Link to="/">
-          <h5 className="text-white shadow p-3 text-center">D__ExPrEsS</h5>
+          <h5 className="text-white shadow p-3 text-center rounded">D__ExPrEsS</h5>
         </Link>
         <ul className="list-unstyled"> 
           {
             (user.email === adminEmail?.email) ?
             (<div>
               <li>
-                <Link to="/orderList" className="text-white">
+                <Link to="/admin/orderList" className="text-white">
                   <FontAwesomeIcon icon={faList} /> <span>Order List</span>
                 </Link>
               </li>
@@ -62,7 +64,7 @@ const SideBar = () => {
             (<div>
               <li>
                 <Link to="/bookService" className="text-white">
-                  <FontAwesomeIcon icon={faTasks} /> <span>Service Book</span>
+                  <FontAwesomeIcon icon={faClipboardList} /> <span>Service Book</span>
                 </Link>
               </li>
               <li>
@@ -72,7 +74,7 @@ const SideBar = () => {
               </li>
               <li>
                 <Link to="/review" className="text-white">
-                  <FontAwesomeIcon icon={faTasks} /> <span>Review</span>
+                  <FontAwesomeIcon icon={faEdit} /> <span>Review</span>
                 </Link>
               </li>
             </div>)

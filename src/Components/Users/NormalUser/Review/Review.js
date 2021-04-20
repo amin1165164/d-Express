@@ -34,47 +34,47 @@ const Review = () => {
         <form onSubmit={handleSubmit}>
           <h3>Review</h3>
           <hr />
-          <div class="mb-3">
-            <label for="name" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="name" className="form-label">
               Name
             </label>
             <input
               onBlur={handleOnBlur}
               type="text"
-              class="form-control"
+              className="form-control"
               id="name"
               name="name"
               placeholder="Enter your name"
               required
             />
           </div>
-          <div class="mb-3">
-            <label for="address" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="address" className="form-label">
               Address
             </label>
             <textarea
               onBlur={handleOnBlur}
-              class="form-control"
+              className="form-control"
               id="address"
               name="address"
               placeholder="Your address"
               required
             />
           </div>
-          <div class="mb-3">
-            <label for="review" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="review" className="form-label">
               Review
             </label>
             <textarea
               onBlur={handleOnBlur}
-              class="form-control"
+              className="form-control"
               id="review"
               name="review"
               placeholder="Your review"
               required
             />
           </div>
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" className="btn btn-primary">
             Submit
           </button>
         </form>

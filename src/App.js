@@ -4,12 +4,14 @@ import "./App.css";
 import Home from "./Components/Home/Home/Home";
 import Login from "./Components/Login/Login";
 import PrivateRoute from "./Components/Privateroute/Privateroute";
+import Profile from "./Components/Profile/Profile";
 import AddService from "./Components/Users/Admin/AddService/AddService";
-import Admin from "./Components/Users/Admin/Admin";
 import MakeAdmin from "./Components/Users/Admin/MakeAdmin/MakeAdmin";
 import OrderList from "./Components/Users/Admin/OdrerList/OrderList";
+import ServiceManager from "./Components/Users/Admin/ServiceManager/ServiceManager";
 import BookService from "./Components/Users/NormalUser/BookService/BookService";
 import Review from "./Components/Users/NormalUser/Review/Review";
+import UserOrders from "./Components/Users/NormalUser/UserOrders/UserOrders";
 import SideBar from "./Components/Users/SideBar/SideBar";
 
 function App() {
@@ -25,24 +27,35 @@ function App() {
         <Route path="/login">
           <Login />
         </Route>
+        <Route path="/profile">
+          <Profile />
+        </Route>
         <PrivateRoute path="/sideBar">
-          <SideBar/>
+          <SideBar />
         </PrivateRoute>
         <Route path="/admin/addService">
-          <AddService/>
+          <AddService />
         </Route>
         <Route path="/admin/makeAdmin">
-          <MakeAdmin/>
+          <MakeAdmin />
         </Route>
-        {/* <PrivateRoute path="/orderList">
-          <OrderList/>
-        </PrivateRoute> */}
-        <PrivateRoute path="/review">
-          <Review/>
-        </PrivateRoute>
+        <Route path="/admin/orderList">
+          <OrderList />
+        </Route>
+        <Route path="/review">
+          <Review />
+        </Route>
+
         <PrivateRoute path="/bookService/:id">
-          <BookService/>
+          <BookService />
         </PrivateRoute>
+        <Route path="/bookingList">
+          <UserOrders />
+        </Route>
+        <Route path="/admin/manageService">
+          <ServiceManager/>
+        </Route>
+        
       </Switch>
     </Router>
   );

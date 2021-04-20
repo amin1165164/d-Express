@@ -3,18 +3,13 @@ import { AnimationWrapper } from "react-hover-animation";
 import { Link } from "react-router-dom";
 
 const ServiceCard = (props) => {
-  console.log(props.service);
+  // console.log(props.service);
   const { _id, type, description, price, image } = props.service;
   return (
     <div className="col-md-4">
       <div className="p-4 m-3 shadow rounded">
         <AnimationWrapper>
-          <img
-            className="img-fluid w-25 test"
-            // style={styles.bounce}
-            src={image}
-            alt=""
-          />
+          <img className="img-fluid w-25 test" src={image} alt="" />
         </AnimationWrapper>
 
         <h3>{type}</h3>
