@@ -17,6 +17,13 @@ const OrderList = () => {
         </div>
         <div className="col-md-8 mt-3">
           <h1 className="text-center">Order List</h1>
+          {bookings.length === 0 && (
+            <div className="text-center ">
+              <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          )}
           <table className="table">
             <thead>
               <tr>

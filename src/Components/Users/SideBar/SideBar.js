@@ -9,7 +9,7 @@ import {
   faList,
   faUserPlus,
   faEdit,
-  faClipboardList
+  faClipboardList,
 } from "@fortawesome/free-solid-svg-icons";
 
 const SideBar = () => {
@@ -17,7 +17,7 @@ const SideBar = () => {
   // console.log(isEmail)
   const user = JSON.parse(localStorage.getItem("user")) || {};
   // console.log(user.email);
-  const adminEmail = isEmail.find(email => email.email);
+  const adminEmail = isEmail.find((email) => email.email);
   // console.log(adminEmail?.email);
   useEffect(() => {
     fetch("https://intense-bayou-17126.herokuapp.com/admins")
@@ -32,12 +32,20 @@ const SideBar = () => {
         style={{ height: "100vh" }}
       >
         <Link to="/">
-          <h5 className="text-white shadow p-3 text-center rounded">D__ExPrEsS</h5>
+          <h5 className="text-white shadow p-3 text-center rounded">
+            D__ExPrEsS
+          </h5>
         </Link>
-        <ul className="list-unstyled"> 
-          {
-            (user.email === adminEmail?.email) ?
-            (<div>
+        {isEmail.length === 0 && (
+          <div className="text-center ">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        )}
+        <ul className="list-unstyled">
+          {user.email === adminEmail?.email ? (
+            <div>
               <li>
                 <Link to="/admin/orderList" className="text-white">
                   <FontAwesomeIcon icon={faList} /> <span>Order List</span>
@@ -59,12 +67,13 @@ const SideBar = () => {
                   <FontAwesomeIcon icon={faTasks} /> <span>Manage Service</span>
                 </Link>
               </li>
-            </div>)
-            :
-            (<div>
+            </div>
+          ) : (
+            <div>
               <li>
                 <Link to="/bookService" className="text-white">
-                  <FontAwesomeIcon icon={faClipboardList} /> <span>Service Book</span>
+                  <FontAwesomeIcon icon={faClipboardList} />{" "}
+                  <span>Service Book</span>
                 </Link>
               </li>
               <li>
@@ -77,11 +86,8 @@ const SideBar = () => {
                   <FontAwesomeIcon icon={faEdit} /> <span>Review</span>
                 </Link>
               </li>
-            </div>)
-          }
-            
-
-            
+            </div>
+          )}
         </ul>
         <div>
           <Link to="/" className="text-white">
